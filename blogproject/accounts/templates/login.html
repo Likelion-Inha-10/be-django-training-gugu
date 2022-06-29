@@ -1,0 +1,43 @@
+<style>
+
+    @import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+           
+    
+    body {
+    
+        margin-top: 100px;
+        background-color: rgb(219, 231, 189);
+        text-align: center;
+        font-family: 'Jua', sans-serif;
+        font-size: 30px;
+    }
+
+    input[type=text], input[type=password]{
+
+    padding: 12px;
+    margin: 5px 0 22px 0;
+    color: black;
+    width: 20%;
+    border: none;
+    background: #f1f1f1;
+    }
+
+
+    h3{
+        font-size: 80px;
+        font-family: 'Indie Flower', cursive;
+    }
+    </style>
+
+<body>
+    <h3>Login</h3>
+<form action="{% url 'login' %}" method="POST">
+    {% csrf_token %}
+    아이디 : <input type='text'  name='username'><br/>
+    비밀번호 : <input type='password'  name='password'><br/>
+    <br/>
+    <input type="submit" value="로그인">
+</form>
+
+</body>
